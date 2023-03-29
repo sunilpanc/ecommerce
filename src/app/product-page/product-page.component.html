@@ -1,1 +1,12 @@
-<p>product-page works!</p>
+<div class="container">
+  <div class="row">
+    <app-product-card
+      class="col-lg-3 col-md-6 mb-4"
+      *ngFor="let data of productData"
+      [title]="data.title"
+      [fileName]="data.fileName"
+      [offeredPrice]="data.offeredPrice"
+      [originalPrice]="data.originalPrice"
+    ></app-product-card>
+  </div>
+</div>
