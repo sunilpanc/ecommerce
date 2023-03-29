@@ -8,7 +8,6 @@ import { Component, Input } from '@angular/core';
 export class RoundedComponent {
   src: string = './../../../assets/images/rounded/';
   @Input() title: string | undefined;
-  @Input() alt: string | undefined;
   @Input()
   set fileName(val: string) {
     this.src += val;

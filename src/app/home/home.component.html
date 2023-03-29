@@ -1,8 +1,184 @@
 <section>
-  <div>
-    <img src="./../../assets/images/main-home.svg" alt="72% off shop now" />
+  <!-- banner for 72% off shop now -->
+  <img
+    src="./../../assets/images/main-home.svg"
+    alt="72% off shop now"
+    class="main-img"
+  />
+
+  <div class="container">
+    <!-- category  -->
+    <div class="row mb-4">
+      <app-rounded
+        *ngFor="let category of dataForRounded"
+        class="col-md-2 col-sm-4 col-6 mt-4"
+        [title]="category.title"
+        [fileName]="category.fileName"
+      ></app-rounded>
+    </div>
+    <!-- deals  -->
+    <div class="row">
+      <div class="col-md-6 col-sm-12 mb-4">
+        <img
+          src="./../../assets/images/deal-images/baggy.svg"
+          class="img-fluid"
+          alt="BAGGY UPTO 60% OFF"
+        />
+      </div>
+      <div class="col-md-6 col-sm-12 mb-4">
+        <img
+          src="./../../assets/images/deal-images/winter-collections.svg"
+          class="img-fluid"
+          alt="WINTER COLLECTIONS"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12 mb-4">
+        <img
+          src="./../../assets/images/deal-images/womens-wear.svg"
+          class="img-fluid"
+          alt="WOMEN'S WEAR"
+        />
+      </div>
+      <div class="col-md-4 col-sm-12 mb-4">
+        <img
+          src="./../../assets/images/deal-images/best-deal.svg"
+          class="img-fluid"
+          alt="BEST DEAL UPTO 81% OFF"
+        />
+      </div>
+      <div class="col-md-4 col-sm-12 mb-4">
+        <img
+          src="./../../assets/images/deal-images/trendy-tshirts.svg"
+          class="img-fluid"
+          alt="TRENDY T-SHIRTS"
+        />
+      </div>
+    </div>
+    <!-- line with text -->
+    <app-line-with-text
+      [content]="'Trending T-Shirts'"
+      class="mb-5"
+    ></app-line-with-text>
+    <!-- product with price and size -->
+    <div>
+      <div class="row">
+        <app-product-card
+          class="col-lg-3 col-md-6 mb-4"
+          *ngFor="let data of dataForTrendingShirts"
+          [title]="data.title"
+          [fileName]="data.fileName"
+          [offeredPrice]="data.offeredPrice"
+          [originalPrice]="data.originalPrice"
+        ></app-product-card>
+      </div>
+      <div class="button-container mb-4">
+        <button type="button" class="btn btn-dark view-all-btn">
+          view all
+        </button>
+      </div>
+    </div>
+    <!-- Featured Products  -->
+    <app-line-with-text
+      [content]="'Featured Products'"
+      class="mb-5"
+    ></app-line-with-text>
+    <div>
+      <div class="row">
+        <app-product-card
+          class="col-lg-3 col-md-6"
+          *ngFor="let data of dataForFeaturedProducts"
+          [title]="data.title"
+          [fileName]="data.fileName"
+          [offeredPrice]="data.offeredPrice"
+          [originalPrice]="data.originalPrice"
+        ></app-product-card>
+      </div>
+      <div class="button-container mb-5">
+        <button type="button" class="btn btn-dark view-all-btn">
+          view all
+        </button>
+      </div>
+    </div>
   </div>
-  <div>
-    <app-rounded></app-rounded>
+  <!-- Banner for Let The Fashion Speak Your Personality! -->
+  <img
+    class="main-img mb-5"
+    src="./../../assets/images/deal-images/fashion-template.svg"
+    alt="Let The Fashion Speak Your Personality!"
+  />
+  <!-- New Products Section  -->
+  <div class="container">
+    <app-line-with-text
+      [content]="'New Products'"
+      class="mb-5"
+    ></app-line-with-text>
+    <div>
+      <div class="row">
+        <app-product-card
+          class="col-lg-3 col-md-6"
+          *ngFor="let data of dataForNewProducts"
+          [title]="data.title"
+          [fileName]="data.fileName"
+          [offeredPrice]="data.offeredPrice"
+          [originalPrice]="data.originalPrice"
+        ></app-product-card>
+      </div>
+      <div class="button-container mb-5">
+        <button type="button" class="btn btn-dark view-all-btn">
+          view all
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Best Selling Products Section  -->
+  <div class="container">
+    <app-line-with-text
+      [content]="'New Products'"
+      class="mb-5"
+    ></app-line-with-text>
+    <div>
+      <div class="row">
+        <app-product-card
+          class="col-sm-3 mb-4"
+          *ngFor="let data of dataForBestSellingProducts"
+          [title]="data.title"
+          [fileName]="data.fileName"
+          [offeredPrice]="data.offeredPrice"
+          [originalPrice]="data.originalPrice"
+        ></app-product-card>
+      </div>
+      <div class="button-container mb-5">
+        <button type="button" class="btn btn-dark view-all-btn">
+          view all
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <app-card-with-title
+        class="col-sm-4"
+        [title]="data.title"
+        [fileName]="data.fileName"
+        *ngFor="let data of dataForCollections"
+      ></app-card-with-title>
+    </div>
+  </div>
+  <!-- Banner for loose fit T-Shirts  -->
+  <img
+    class="main-img mb-5"
+    src="./../../assets/images/loose-fit.svg"
+    alt="Loose Fit Stylies tees Shop Now!"
+  />
+  <!-- Card for Sale -->
+  <div class="container">
+    <div class="row">
+      <app-sale-card
+        class="col-md-6 col-sm-12"
+        *ngFor="let card of dataForSaleCard"
+        [discount]="card.discount"
+        [fileName]="card.fileName"
+      ></app-sale-card>
+    </div>
   </div>
 </section>

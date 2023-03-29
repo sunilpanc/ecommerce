@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="product-container">
+    <img src="{{ src }}" class="product-image" />
+    <div class="product-middle d-flex">
+      <span class="product-text">
+        <img src="./../../../assets/images/icons/cart-overlay.svg" />
+      </span>
+      <span class="product-text">
+        <img src="./../../../assets/images/icons/add-wishlist-icon.svg" />
+      </span>
+      <span class="product-text">
+        <img src="./../../../assets/images/icons/share-icon.svg" />
+      </span>
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+      <span class="title-text">{{ title }}</span>
+    </h5>
+    <p class="card-text d-flex justify-content-center">
+      <span class="price">₹{{ offeredPrice }}</span>
+      <span class="cut-price">₹{{ originalPrice }}</span>
+    </p>
+    <div class="d-flex justify-content-center size-buttons">
+      <button type="button" class="btn btn-outline-dark">S</button>
+      <button type="button" class="btn btn-outline-dark">M</button>
+      <button type="button" class="btn btn-outline-dark">L</button>
+      <button type="button" class="btn btn-outline-dark">XL</button>
+      <button type="button" class="btn btn-outline-dark">XXL</button>
+    </div>
+  </div>
+</div>

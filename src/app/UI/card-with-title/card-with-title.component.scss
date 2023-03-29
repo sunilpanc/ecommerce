@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.product-container {
+  position: relative;
+  width: 100%;
+}
+
+.product-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.01)
+  );
+  backdrop-filter: blur(10px);
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  opacity: 1;
+}
