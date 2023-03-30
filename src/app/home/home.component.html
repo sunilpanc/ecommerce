@@ -2,8 +2,9 @@
   <!-- banner for 72% off shop now -->
   <img
     src="./../../assets/images/main-home.svg"
+    routerLink="products"
     alt="72% off shop now"
-    class="main-img"
+    class="main-img cursor"
   />
 
   <div class="container">
@@ -11,9 +12,10 @@
     <div class="row mb-4">
       <app-rounded
         *ngFor="let category of dataForRounded"
-        class="col-md-2 col-sm-4 col-6 mt-4"
+        class="col-md-2 col-sm-4 col-6 mt-4 cursor"
         [title]="category.title"
         [fileName]="category.fileName"
+        routerLink="products"
       ></app-rounded>
     </div>
     <!-- deals  -->
@@ -21,38 +23,43 @@
       <div class="col-md-6 col-sm-12 mb-4">
         <img
           src="./../../assets/images/deal-images/baggy.svg"
-          class="img-fluid"
+          class="img-fluid cursor"
           alt="BAGGY UPTO 60% OFF"
+          routerLink="products"
         />
       </div>
-      <div class="col-md-6 col-sm-12 mb-4">
+      <div class="col-md-6 col-sm-12 mb-4 cursor">
         <img
           src="./../../assets/images/deal-images/winter-collections.svg"
-          class="img-fluid"
+          class="img-fluid cursor"
           alt="WINTER COLLECTIONS"
+          routerLink="products"
         />
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-sm-12 mb-4">
+      <div class="col-md-4 col-sm-12 mb-4 cursor">
         <img
           src="./../../assets/images/deal-images/womens-wear.svg"
-          class="img-fluid"
+          class="img-fluid cursor"
           alt="WOMEN'S WEAR"
+          routerLink="products"
         />
       </div>
-      <div class="col-md-4 col-sm-12 mb-4">
+      <div class="col-md-4 col-sm-12 mb-4 cursor">
         <img
           src="./../../assets/images/deal-images/best-deal.svg"
-          class="img-fluid"
+          class="img-fluid cursor"
           alt="BEST DEAL UPTO 81% OFF"
+          routerLink="products"
         />
       </div>
       <div class="col-md-4 col-sm-12 mb-4">
         <img
           src="./../../assets/images/deal-images/trendy-tshirts.svg"
-          class="img-fluid"
+          class="img-fluid cursor"
           alt="TRENDY T-SHIRTS"
+          routerLink="products"
         />
       </div>
     </div>
@@ -74,7 +81,11 @@
         ></app-product-card>
       </div>
       <div class="button-container mb-4">
-        <button type="button" class="btn btn-dark view-all-btn">
+        <button
+          type="button"
+          class="btn btn-dark view-all-btn"
+          routerLink="products"
+        >
           view all
         </button>
       </div>
@@ -96,7 +107,11 @@
         ></app-product-card>
       </div>
       <div class="button-container mb-5">
-        <button type="button" class="btn btn-dark view-all-btn">
+        <button
+          type="button"
+          class="btn btn-dark view-all-btn"
+          routerLink="products"
+        >
           view all
         </button>
       </div>
@@ -104,9 +119,10 @@
   </div>
   <!-- Banner for Let The Fashion Speak Your Personality! -->
   <img
-    class="main-img mb-5"
+    class="main-img mb-5 cursor"
     src="./../../assets/images/deal-images/fashion-template.svg"
     alt="Let The Fashion Speak Your Personality!"
+    routerLink="products"
   />
   <!-- New Products Section  -->
   <div class="container">
@@ -126,7 +142,11 @@
         ></app-product-card>
       </div>
       <div class="button-container mb-5">
-        <button type="button" class="btn btn-dark view-all-btn">
+        <button
+          type="button"
+          class="btn btn-dark view-all-btn cursor"
+          routerLink="products"
+        >
           view all
         </button>
       </div>
@@ -150,7 +170,11 @@
         ></app-product-card>
       </div>
       <div class="button-container mb-5">
-        <button type="button" class="btn btn-dark view-all-btn">
+        <button
+          type="button"
+          class="btn btn-dark view-all-btn cursor"
+          routerLink="products"
+        >
           view all
         </button>
       </div>
@@ -174,10 +198,11 @@
   <div class="container">
     <div class="row">
       <app-sale-card
-        class="col-md-6 col-sm-12"
+        class="col-md-6 col-sm-12 cursor"
         *ngFor="let card of dataForSaleCard"
         [discount]="card.discount"
         [fileName]="card.fileName"
+        routerLink="products"
       ></app-sale-card>
     </div>
   </div>
